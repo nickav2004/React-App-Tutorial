@@ -41,6 +41,13 @@
       "type": "Fruit",
       "brand": "Banana Co",
       "id": 6
+    },
+    {
+      "name": "Steak",
+      "price": "25",
+      "type": "Ribeye",
+      "brand": "A5",
+      "id": 7
     }
   ]
 }

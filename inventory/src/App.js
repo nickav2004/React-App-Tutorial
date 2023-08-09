@@ -1,6 +1,6 @@
 import SearchBar from "./SearchBar";
 import AddItem from "./AddItem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ItemsDisplay from "./ItemsDisplay";
 
 function App() {
@@ -12,6 +12,12 @@ function App() {
   });
 
   const [data, setData] = useState({ items: [] });
+
+  useEffect(() => {
+    fetch("http://localhost:3000/items")
+      .then((response) => response.json())
+      .then((items) => setData({ items }));
+  }, []);
 
   const updateFilters = (searchParams) => {
     setFilters(searchParams);
