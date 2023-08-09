@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "name": "Cookie ",
+      "price": "4.99",
+      "type": "Chocolate",
+      "brand": "Chip Ahoy",
+      "id": 1
+    },
+    {
+      "name": "Cookie",
+      "price": "3.99",
+      "type": "Chocalate",
+      "brand": "Chewy",
+      "id": 2
+    },
+    {
+      "name": "Pineapple ",
+      "price": "2",
+      "type": "Fruit",
+      "brand": "Banana Co",
+      "id": 3
+    },
+    {
+      "name": "Apple ",
+      "price": "1",
+      "type": "Fruit",
+      "brand": "Banana Co",
+      "id": 4
+    },
+    {
+      "name": "banana",
+      "price": "0.50",
+      "type": "Fruit",
+      "brand": "Banana Co",
+      "id": 5
+    },
+    {
+      "name": "orange",
+      "price": "1.21",
+      "type": "Fruit",
+      "brand": "Banana Co",
+      "id": 6
+    }
+  ]
+}

@@ -19,10 +19,21 @@ function App() {
 
   const addItemToData = (item) => {
     let items = data["items"];
-    item.id = items.length;
-    items.push(item);
-    setData({ items });
-    console.log(data);
+
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(item),
+    };
+
+    fetch("http://localhost:3000/items", requestOptions)
+      .then((response) => response.json())
+      .then((item) => {
+        items.push(item);
+        setData({ items });
+      });
   };
 
   const filterData = (items) => {
@@ -52,10 +63,12 @@ function App() {
         <SearchBar updateSearchParams={updateFilters} />
       </div>
       <div className="row mt-3">
-        <AddItem addItem={addItemToData} />
-      </div>
-      <div className="row mt-3">
-        <ItemsDisplay items={filterData(data["items"])} />
+        <div className="col-3">
+          <AddItem addItem={addItemToData} />
+        </div>
+        <div className="col-9">
+          <ItemsDisplay items={filterData(data["items"])} />
+        </div>
       </div>
     </div>
   );
